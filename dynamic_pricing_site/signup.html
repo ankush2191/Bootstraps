@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - StreamPay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">StreamPay</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="for-creators.html">For Creators</a></li>
+                <li><a href="for-viewers.html">For Viewers</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="signup-intro">
+            <h1>Join StreamPay</h1>
+            <p>Be the first to experience the future of live streaming.</p>
+        </section>
+        <section id="signup-form-section">
+            <h2>Create Your Account or Join Waitlist</h2>
+                <form id="join-waitlist-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="interest">I am interested as a:</label>
+                    <select id="interest" name="interest">
+                        <option value="viewer">Viewer</option>
+                        <option value="creator">Creator</option>
+                        <option value="both">Both Viewer & Creator</option>
+                    </select>
+                    
+                    <input type="submit" value="Join Waitlist / Express Interest">
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 StreamPay. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

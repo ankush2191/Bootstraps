@@ -1,0 +1,281 @@
+/* --- Base Styles --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1em 0;
+    border-bottom: 3px solid #3498db;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Assuming an 'active' class for current page */
+    color: #3498db;
+}
+
+/* --- Main Content --- */
+main {
+    padding: 2em 0;
+}
+
+section {
+    padding: 2em 0; /* Vertical padding for sections */
+    margin-bottom: 1.5em; /* Space between sections */
+}
+
+/* Specific section styling can be added as needed */
+#hero {
+    background-color: #3498db; /* A vibrant color for hero */
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+#hero h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e67e22; /* Contrasting CTA color */
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+    text-decoration: none;
+}
+
+#features-overview .feature {
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#features-overview .feature h3 {
+    margin-top: 0;
+}
+
+/* --- Forms --- */
+form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px; /* Limit form width */
+    margin: 2em auto; /* Center form on page */
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 1.2em); /* Account for padding */
+    padding: 0.6em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em;
+}
+
+/* --- Responsive Design --- */
+
+/* Mobile Navigation Toggle (Structure assumed in HTML, JS needed for functionality) */
+.nav-toggle {
+    display: none; /* Hidden by default, shown on small screens */
+    /* Styling for hamburger icon */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hidden for toggle */
+        margin-top: 1em;
+    }
+
+    header nav ul.active { /* Class to show nav */
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block; /* Make links take full width */
+        padding: 10px;
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger */
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px;
+        /* Add hamburger icon styles */
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 0.7em 1.2em;
+    }
+
+    /* Adjust layout for features, forms if needed */
+    #features-overview {
+        display: flex;
+        flex-direction: column;
+    }
+    #features-overview .feature {
+        margin-right: 0; /* Remove right margin if it was set for side-by-side */
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.5em;
+        text-align: center; /* Center logo if nav is below */
+        width: 100%;
+        margin-bottom: 0.5em; /* Space if nav wraps below */
+    }
+    
+    header nav {
+        align-items: center; /* Center items if logo is above toggle */
+    }
+
+    /* Further adjustments for very small screens if necessary */
+    #hero h1 {
+        font-size: 1.8em;
+    }
+    
+    form {
+        margin: 1em;
+        padding: 1.5em;
+    }
+}
